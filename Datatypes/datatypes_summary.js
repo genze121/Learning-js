@@ -41,6 +41,8 @@ const myFunction = function () {
   console.log("Hello World");
 }; // function
 
+myFunction() // -> calling a function
+
 console.log(typeof myFunction); // returns object function
 console.log(typeof useEmail); // returns undefined
 console.log(typeof outsideTemp); // returns object
