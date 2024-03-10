@@ -28,7 +28,7 @@ console.log(JsUser["full name"]);
 console.log(JsUser[mySymbol]);
 
 JsUser.email = "js@chatgpt.com";
-Object.freeze(JsUser);
+Object.freeze(JsUser); // It will not allow us to modify the object.
 JsUser.email = "js@microsoft.com";
 
 console.log(JsUser);
