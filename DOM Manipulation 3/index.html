@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1.0, initial-scale=1.0">
+    <title>JavaScript DOM Learning</title>
+</head>
+
+<body style="background: #212121;color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+
+</body>
+
+<script>
+
+    // Simple approach to create the elements,when it increases then performance issue arises because it has to traverse all the tree.
+
+    function languageName(langName) {
+        const liItems = document.createElement('li');
+        liItems.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(liItems);
+    }
+
+    languageName("python")
+    languageName("typeScript")
+
+    // Optimizing the first solution in the best way so that it doesn't traverse the tree, directly access the element which we want to target.
+
+    function languageOptimizing(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').append(li)
+    }
+
+    languageOptimizing('java');
+
+    // Edit - 1
+
+    const secondLang = document.querySelector('li:nth-child(2)');
+    const newLi = document.createElement('li');
+    newLi.textContent = 'Mojo';
+    secondLang.replaceWith(newLi);
+
+    // Edit - 2
+
+    const firstLang = document.querySelector('li:first-child');
+    firstLang.outerHTML = '<li>typeScript</l1>';
+
+    // Edit - 3
+
+    const lastLang = document.querySelector('li:last-child');
+    lastLang.outerHTML = '<li>ruby</li>';
+
+    // Remove
+
+    const removeElement = document.querySelector('li:last-child');
+    removeElement.remove();
+
+</script>
+
+</html>
