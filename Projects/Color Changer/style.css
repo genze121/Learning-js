@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    display: block;
+}
+
+.canvas {
+    margin: 100px auto 100px;
+    width: 80%;
+    text-align: center;
+}
+
+.button {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #212121;
+    display: inline-block;
+    margin: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#grey {
+    background: grey;
+}
+
+#white {
+    background: #fff;
+}
+
+#red {
+    background: red;
+}
+
+#yellow {
+    background: yellow;
+}
+
+p {
+    margin-top: 20px;
+}
