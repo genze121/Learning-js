@@ -6,21 +6,18 @@ buttonElement.addEventListener("click", calculateAge);
 
 function calculateAge() {
   if (dateValue.value === "") {
-    alert("Please Enter the date to calculate the age!!");
+    alert("Please enter the date to calculate the age!!");
     return;
   }
   const currentDate = new Date();
-  const birthdayYear = currentDate.getFullYear();
-  const setDate = new Date(dateValue.value);
-  const pastYear = setDate.getFullYear();
-  if (birthdayYear - pastYear === 0) {
-    alert("Both Currrent Birth Year and Past Birth Year is same!!");
-    return;
-  }
-  const finalDOB = birthdayYear - pastYear;
-  if (finalDOB === 1) {
-    displayDob.innerHTML = `Your age is :- ${finalDOB} Year old`;
-  } else {
-    displayDob.innerHTML = `Your age is :- ${finalDOB} Years old`;
-  }
+  const currentBirthYear = currentDate.getFullYear();
+  const setBirthDate = new Date(dateValue.value);
+  const birthYear = setBirthDate.getFullYear();
+  let finalDOB = currentBirthYear - birthYear;
+  let month = setBirthDate.getMonth() + 1;
+  let day = setBirthDate.getDate();
+  finalDOB = finalDOB > 1 ? `${finalDOB} Years` : `${finalDOB} Year`;
+  month = month > 1 ? `${month} months` : `${month} month`;
+  day = day > 1 ? `${day} days old` : `${day} day old`;
+  displayDob.innerHTML = `Your age is :- ${finalDOB} ${month} ${day} `;
 }
