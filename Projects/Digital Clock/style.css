@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(235, 255, 231);
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.time-banner {
+    background: #fff;
+    margin: 200px auto 200px;
+    width: 40%;
+    height: 200px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 15px;
+}
+
+.time h1 {
+    padding: 20px;
+}
+
+.time .clock {
+    background: orange;
+    width: 300px;
+    margin: 10px auto 10px;
+    height: 20px;
+    border-radius: 20px;
+    padding: 10px;
+}
