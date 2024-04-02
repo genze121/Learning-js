@@ -58,7 +58,7 @@ body {
     font-weight: bold;
 }
 
-.button{
+.button {
     background: rgb(0, 55, 0);
     color: #fff;
     width: 200px;
@@ -69,6 +69,18 @@ body {
     cursor: pointer;
 }
 
-.button h2{
+.button h2 {
     padding: 5px;
+}
+
+/* mobile-friendly/responsive based */
+@media screen and (max-width: 700px) {
+    .container {
+        width: 300px;
+        height: 550px;
+    }
+
+    .form .guessField {
+        width: 200px;
+    }
 }

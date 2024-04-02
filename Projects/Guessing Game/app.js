@@ -85,6 +85,9 @@ function startNewGame() {
     guesses.innerHTML = "";
     lastResult.innerHTML = `${11 - numGuess}`;
     inputField.removeAttribute("disabled", "");
+    inputField.style.cursor = "default";
+    document.getElementById("submitButton").disabled = false;
+    submitButton.style.cursor = "pointer";
     startOver.removeChild(paragraph);
     lowOrHi.innerHTML = "";
     playGame = true;
