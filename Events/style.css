@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgb(233, 217, 255);
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.parent li {
+    margin: 5px;
+    list-style-type: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.parent li > img {
+    border: 1px solid #000;
+}
+
+.parent a {
+    margin-top: 20%;
+    margin-left: -310px;
+}
