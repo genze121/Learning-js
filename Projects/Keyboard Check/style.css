@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+.wrapper {
+    margin: 200px auto 200px;
+    width: 50%;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    height: 300px;
+}
+
+.keyElement h3 {
+    margin: 150px;
+}
+
+.table {
+    margin: -50px;
+}
+
+table {
+    width: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+table th,
+td {
+    border: 1px solid #fff;
+    padding: 10px;
+}
+
+table th {
+    background: purple;
+    color: #fff;
+}

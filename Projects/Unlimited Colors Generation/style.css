@@ -1,0 +1,25 @@
+#start {
+    background: green;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 20px;
+}
+
+#start:hover {
+    cursor: pointer;
+}
+
+#stop {
+    background: red;
+    width: 100px;
+    height: 30px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    color: #fff;
+    margin: 0 0 0 5px;
+}
+
+#stop:hover {
+    cursor: pointer;
+}
