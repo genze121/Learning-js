@@ -1,0 +1,29 @@
+JavaScript 
+   a) Synchronous -> executes one by one
+   b) Single Threaded Language
+
+Synchronous and Single Threaded Language are the default behaviours of JavaScript.
+
+Execution Context
+   |__ executes one line of a code at a time.
+
+   |
+   |-- console log --> 1          each operation waits for the last one to complete before exceuting.
+   |
+   |-- console log --> 2
+   |
+   |
+Single Threaded
+   _______________________         MEMORY HEAP               
+  |                       |        
+  |                       |
+  |      CALL STACK       |
+  |                       |
+  |_______________________| 
+
+
+Blocking Code Vs Non - Blocking Code
+
+Blocking code ==> block the flow of program ==> read file sync.
+
+Non - Blocking Code ==> does not block the execution ==> read file async.
