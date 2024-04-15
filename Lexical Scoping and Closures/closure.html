@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+
+<body>
+    <button id="orange"> Orange</button>
+    <button id="green"> Green</button>
+</body>
+
+<script>
+    function init() {
+        let name = "Mozilla"; // name is a local variable created by init
+        function displayName() {
+            // displayName() is the inner function, that forms the closure
+            console.log(name); // use variable declared in the parent function
+        }
+        displayName();
+    }
+    init();
+
+    function outerFunction() {
+        let data = 'Javascript';
+        function innerFunction() {
+            console.log("INNER ", data); // Javascript
+        }
+        innerFunction()
+    }
+    outerFunction();
+    console.log("OUTER ", data); // ReferenceError : data is not defined (Temporal Dead Zone Error)
+
+    function makeFunc() {
+        const name = "Mozilla";
+        function displayName() {
+            console.log(name);
+        }
+        return displayName;
+    }
+
+    const myFunc = makeFunc();
+    myFunc();
+</script>
+
+<script>
+
+    function clickHandler(color) {
+        // lexical scoping that is color is there we can use in the inner function displayColor, so this is what the closure is called.
+        function displayColor() {
+            document.body.style.backgroundColor = `${color}`
+        }
+
+        return displayColor;
+    }
+
+    document.getElementById('orange').onclick = clickHandler('orange')
+    document.getElementById('green').onclick = clickHandler('green')
+
+</script>
+
+</html>
